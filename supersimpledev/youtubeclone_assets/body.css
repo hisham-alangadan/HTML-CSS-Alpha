@@ -14,8 +14,23 @@
     grid-template-columns: 50px 250px;
 }
 
+.thumbnail-row {
+    position: relative;
+}
+
 .video-thumbnail {
     width: 100%;
+}
+
+.video-time {
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 10px;
+    bottom: 12px;
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 3px;
 }
 
 .channel-icon {
