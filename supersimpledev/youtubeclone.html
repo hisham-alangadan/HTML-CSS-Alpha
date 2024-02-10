@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="youtubeclone_assets/body.css">
     <link rel="stylesheet" href="youtubeclone_assets/header.css">
     <link rel="stylesheet" href="youtubeclone_assets/general.css">
+    <link rel="stylesheet" href="youtubeclone_assets/sidebar.css">
 </head>
 
 <body>
@@ -24,15 +25,58 @@
             <input class="search-bar" type="text" placeholder="Search">
             <button class="search-icon-button">
                 <img src="youtubeclone_assets/search.svg" alt="search_icon">
+                <div class="tooltip">Search</div>
             </button>
             <button class="microphone-icon-button">
                 <img src="youtubeclone_assets/microphone.svg" alt="microphone_icon">
+                <div class="tooltip">Voice Search</div>
             </button>
         </div>
         <div class="right-section">
-            <img class="add-icon" src="youtubeclone_assets/library_add.svg" alt="add_video">
-            <img class="block-icon" src="youtubeclone_assets/block.svg" alt="block_icon">
+            <div class="add-icon">
+                <img src="youtubeclone_assets/library_add.svg" alt="add_video">
+                <div class="tooltip">Upload Video</div>
+            </div>
+            <div class="block-icon">
+                <img src="youtubeclone_assets/block.svg" alt="block_icon">
+                <div class="block-notification">
+                    3
+                </div>
+            </div>
             <img class="profile-icon" src="youtubeclone_assets/profile_icon.jpg" alt="profile_icon">
+        </div>
+    </div>
+
+    <div class="side-bar">
+        <div class="sidebar-links">
+            <img src="youtubeclone_assets/home_icon.svg" alt="home_icon">
+            <div>
+                Home
+            </div>
+        </div>
+        <div class="sidebar-links">
+            <img src="youtubeclone_assets/subscriptions_icon.svg" alt="subscriptions_icon">
+            <div>
+                Subscriptions
+            </div>
+        </div>
+        <div class="sidebar-links">
+            <img src="youtubeclone_assets/esports_icon.svg" alt="esports_icon">
+            <div>
+                Esports
+            </div>
+        </div>
+        <div class="sidebar-links">
+            <img src="youtubeclone_assets/music_icon.svg" alt="music_icon">
+            <div>
+                Music
+            </div>
+        </div>
+        <div class="sidebar-links">
+            <img src="youtubeclone_assets/library_icon.svg" alt="library_icon">
+            <div>
+                Library
+            </div>
         </div>
     </div>
 
@@ -56,6 +100,13 @@
                     <p class="video-stats">
                         510K views &middot; 4 days ago
                     </p>
+                </div>
+                <div class="channel-peek">
+                    <img src="youtubeclone_assets/channelicon1.jpg" alt="channel_icon">
+                    <div>
+                        <h1>Thoughty2</h1>
+                        <p>6M subscribers</p>
+                    </div>
                 </div>
             </div>
         </div>

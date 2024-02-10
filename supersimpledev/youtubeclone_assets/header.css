@@ -9,6 +9,9 @@
     top: 0;
     right: 0;
     left: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: rgb(230, 230, 230);
 }
 
 .left-section {
@@ -64,7 +67,6 @@
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     height: 38px;
-    display: flex;
     border-width: 1px;
     border-color: rgb(186, 186, 186);
     width: 66px;
@@ -74,6 +76,25 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: -30px;
+    background-color: grey;
+    padding: 5px;
+    border-radius: 3px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+}
+
+.search-icon-button:hover .tooltip ,
+.microphone-icon-button:hover .tooltip,
+.add-icon:hover .tooltip {
+    opacity: 1;
 }
 
 .search-icon-button img {
@@ -86,6 +107,7 @@
     border-radius: 19px;
     border: none;
     padding-top: 5px;
+    position: relative;
 }
 
 .right-section {
@@ -99,13 +121,31 @@
 
 .add-icon {
     height: 25px;
+    position: relative;
 }
 
 .block-icon {
     height: 25px;
+    position: relative;
+}
+
+.block-notification {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    align-items: center;
+    padding: 2px 5px 2px 5px;
+    border-radius: 10px;
+    border-color: white;
+    border: solid;
+    border-width: 2px;
 }
 
 .profile-icon {
     height: 38px;
     border-radius: 18px;
+    position: relative;
 }
