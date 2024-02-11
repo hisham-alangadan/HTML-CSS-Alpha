@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+</head>
+<body>
+    <script>
+        const score = {
+            wins: 0,
+            loses: 0,
+            ties: 0
+        }
+
+        function decideWinner (userChoice) {
+            let randomNumber = Math.random();
+            let computerChoice = '';
+            let result = '';
+
+            if (randomNumber < 0.33) {
+                computerChoice = 'rock';
+            } else if (randomNumber > 0.66) {
+                computerChoice = 'scissor';
+            } else {
+                computerChoice = 'paper';
+            }
+            if (userChoice == computerChoice) {
+                result = 'Tie.';
+                score.ties++;
+            } else if ((userChoice == 'rock' && computerChoice == 'scissor') || (userChoice == 'paper' && computerChoice == 'rock') || (userChoice == 'scissor' && computerChoice == 'paper')) {
+                result = 'You won.';
+                score.wins++;
+            } else {
+                result = 'You lost.';
+                score.loses++;
+            }
+            
+            alert(`You chose ${userChoice}. The computer chose ${computerChoice}. ${result}\nWins:${score.wins} Loses:${score.loses} Ties:${score.ties}`);
+        }
+    </script>
+
+    <h3>Rock Paper Scissors</h3>
+    <button onclick="decideWinner('rock')">Rock</button>
+    <button onclick="decideWinner('paper')">Paper</button>
+    <button onclick="decideWinner('scissors')">Scissors</button>
+    <button onclick="score.loses = score.ties = score.wins = 0">Reset Score</button>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <script>
+        let cartquantity = 0;
+        let calculation = "";
+
+        function updateCartQuantity (amount) {
+            if (amount == '0') {
+                cartquantity = 0;
+                console.log('Cart Quantity Reset');
+            } else {
+                if (cartquantity == 10) {
+                    alert('Cart is full!');
+                    return;
+                }
+                cartquantity = (cartquantity + amount) > 10 ? 10 : cartquantity += amount;
+                console.log(`Cart Quantity: ${cartquantity}`);
+            }
+        }
+
+        function appendCalculation (character) {
+            calculation += character;
+            console.log(calculation);
+        }
+    </script>
+    
+    <h3>Cart Quantity</h3> 
+    <button onclick="console.log(`Cart Quantity: ${cartquantity}`)">Show Quantity</button>
+    <button onclick="updateCartQuantity(1)">Add to Cart</button>
+    <button onclick="updateCartQuantity(2)">+2</button>
+    <button onclick="updateCartQuantity(3)">+3</button>
+    <button onclick="updateCartQuantity(0)">Reset Cart</button>
+
+    <br><br>
+    <h3>Calculator</h3>
+    <button onclick="appendCalculation(1)">1</button>
+    <button onclick="appendCalculation(2)">2</button>
+    <button onclick="appendCalculation(3)">3</button>
+    <button onclick="appendCalculation(' + ')">+</button>
+    <button onclick="calculation = eval(calculation); console.log(calculation)">=</button>
+    <button onclick="calculation = ''; console.log('Cleared.')">Clear</button>
+</body>
+</html>
