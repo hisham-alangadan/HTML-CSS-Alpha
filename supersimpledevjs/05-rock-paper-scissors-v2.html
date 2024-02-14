@@ -18,6 +18,7 @@
     <p class="js-score"></p>
 
     <button class="reset-button" onclick="resetScore()">Reset Score</button>
+    <button class="auto-play-button" onclick="autoPlay()">Auto Play</button>
 
     <script>
         const score = {
@@ -67,6 +68,28 @@
             displayScore();
             document.querySelector('.js-result').innerHTML = '';
             document.querySelector('.js-computer-choice').innerHTML = '';
+        }
+
+        let isPlaying = false;
+        let autoPlayId;
+
+        function autoPlay() {
+            if (isPlaying) {
+                clearInterval(autoPlayId);
+                isPlaying = false;
+                return;
+            }
+            autoPlayId = setInterval(() => {
+                const randomNumber = Math.random();
+                if (randomNumber < 0.33) {
+                    updateScore('rock');
+                } else if (randomNumber > 0.66) {
+                    updateScore('paper');
+                } else {
+                    updateScore('scissor');
+                }
+            }, 10);
+            isPlaying = true;
         }
     </script>
 </body>
